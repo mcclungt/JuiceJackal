@@ -1,6 +1,16 @@
+// TODO
+// fix variable names
+// clean up current js
+// get rid of hardcode
+// fix callback function for second cursor
+
 const listItem = document.querySelectorAll("li");
 let itemArray = [];
 let myvar;
+let letter;
+const cursorChar = document.createTextNode("|"); // for later
+const twitter = "https://twitter.com/juicejackal";
+let twitterFlag = false;
 
 for (i = 0; i < listItem.length/2; i++) {
 	let item = [listItem[i], listItem[i+listItem.length/2]];
@@ -25,3 +35,32 @@ const removeCursor = (cursor) => {
 	cursor.classList.add('invisible');												
 	clearInterval(myvar);
 }
+
+const printSentence = (id, sentence) => {
+  for(var i = 0; i < sentence.length; i++){
+    ((index) => {
+      setTimeout(() => {
+      	letter = document.createTextNode(sentence[index]);
+        document.getElementById(id).appendChild(letter); 
+      }, 80 * i);
+    })(i);
+  }
+}
+
+const sentenceCursor = (id, sentence, callback) => {
+	printSentence(id, sentence);
+	callback();
+}
+
+const hardCodePrint = () => {
+	if (twitterFlag === false) {
+		printSentence("text-parser", twitter);
+		twitterFlag = true;
+	}
+}
+
+// FOR LATER
+// sentenceCursor("text-parser", twitter, () => {
+// 	console.log(document.getElementById('text-parser').childNodes);
+// 	document.getElementById("text-parser").appendChild(cursorChar);
+// });
