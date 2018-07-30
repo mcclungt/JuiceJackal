@@ -1,6 +1,12 @@
 html {
 	display: block;
-	overflow: hidden;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
 }
 
 body {
@@ -32,6 +38,10 @@ header {
 
 a {
 	text-decoration: none;
+}
+
+a:visited {
+	color: red;
 }
 
 ul {
@@ -90,8 +100,38 @@ li {
 	width: 100%;
 }
 
+#flex-photos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.fp {
+	width: 250px;
+	height: 250px;
+	padding: 40px;
+	opacity: .8;
+	-webkit-transition: width .5s, height .5s, opacity .5s, padding .5s; /* Safari */
+    transition: width .5s, height .5s, opacity .5s, padding .5s;
+}
+
+.fp:hover {
+	width: 260px;
+	height: 260px;
+	opacity: 1;
+	padding: 35px;
+	-webkit-transition: width .5s, height .5s, opacity .5s, padding .5s; /* Safari */
+    transition: width .5s, height .5s, opacity .5s, padding .5s;
+}
+
+.blank-space {
+	width: 250px;
+	height: 250px;
+	padding: 40px;
+}
+
 #bio {
-	max-width: 30%;
+	max-width: 462px;
 	font-size: 16px;
 	line-height: 1.3em;
 }
