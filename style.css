@@ -14,7 +14,11 @@ body {
 	height: 100%;
 	font-size: 20px;
   	color: red;
-  	font-family: 'VT323', monospace;
+  	font-family: Krungthep, 'VT323', monospace;
+}
+
+header {
+	width: 100%;
 }
 
 #wrapper {
@@ -78,6 +82,18 @@ li {
 	float: left;
 	height: 107.16px;
 	width: 344.625px;
+}
+
+#content-wrapper {
+	margin-top: 100px;
+	float: left;
+	width: 100%;
+}
+
+#bio {
+	max-width: 30%;
+	font-size: 16px;
+	line-height: 1.3em;
 }
 
 #text-parser {
