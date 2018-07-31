@@ -36,30 +36,37 @@ const removeCursor = (cursor) => {
 	clearInterval(myvar);
 }
 
-const printSentence = (id, sentence) => {
-  for(var i = 0; i < sentence.length; i++){
-    ((index) => {
-      setTimeout(() => {
-      	letter = document.createTextNode(sentence[index]);
-        document.getElementById(id).appendChild(letter); 
-      }, 80 * i);
-    })(i);
-  }
+const changeToolTip = () => {
+	let tooltip = document.getElementById("myToolTip");
+	tooltip.innerHTML = "Copied";
 }
 
-const sentenceCursor = (id, sentence, callback) => {
-	printSentence(id, sentence);
-	callback();
-}
-
-const hardCodePrint = () => {
-	if (twitterFlag === false) {
-		printSentence("text-parser", twitter);
-		twitterFlag = true;
-	}
+const revertToolTip = () => {
+	let tooltip = document.getElementById("myToolTip");
+	tooltip.innerHTML = "Copy to Clipboard";
 }
 
 // FOR LATER
+// const printSentence = (id, sentence) => {
+//   for(var i = 0; i < sentence.length; i++){
+//     ((index) => {
+//       setTimeout(() => {
+//       	letter = document.createTextNode(sentence[index]);
+//         document.getElementById(id).appendChild(letter); 
+//       }, 80 * i);
+//     })(i);
+//   }
+// }
+// const sentenceCursor = (id, sentence, callback) => {
+// 	printSentence(id, sentence);
+// 	callback();
+// }
+// const hardCodePrint = () => {
+// 	if (twitterFlag === false) {
+// 		printSentence("text-parser", twitter);
+// 		twitterFlag = true;
+// 	}
+// }
 // sentenceCursor("text-parser", twitter, () => {
 // 	console.log(document.getElementById('text-parser').childNodes);
 // 	document.getElementById("text-parser").appendChild(cursorChar);
