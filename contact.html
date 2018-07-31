@@ -35,9 +35,27 @@
 				<a href="https://soundcloud.com/user-929104972" target="_blank">Soundcloud</a>
 				<br><br>
 				<a href="https://twitter.com/juicejackal" target="_blank">Twitter</a>
+				<br><br>
+				<div id="email-copy-box">
+					<span id="email">bmorsberger@gmail.com</span> 
+					<button class="btn" data-clipboard-text="bmorsberger@gmail.com" onclick="changeToolTip()" onmouseout="revertToolTip()">
+						<span class="tooltiptext" id="myToolTip">Copy to Clipboard</span>
+					    Copy
+					</button>
+				</div>
 			</div>
 		</div>
 		<!-- <a href="https://twitter.com/juicejackal" target="_blank"><div id="text-parser"></div></a> -->
+		<script src="dist/clipboard.min.js"></script>
+		<script>
+		    var clipboard = new ClipboardJS('.btn');
+		    clipboard.on('success', function(e) {
+		        console.log(e);
+		    });
+		    clipboard.on('error', function(e) {
+		        console.log(e);
+		    });
+	    </script>
 		<script type="text/javascript" src="script.js"></script>
 	</body>
 </html>
