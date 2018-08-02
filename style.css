@@ -15,7 +15,7 @@ body {
 	background-color: #1f2225;
 	/*background: linear-gradient(to right, #1f2225, #3d4447, #1f2225);*/
 	background-image: url('assets/JuicedTranslucent.png');
-	background-size: 70%, 70%;
+	background-size: 40%, 40%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: bottom right;
@@ -60,6 +60,7 @@ header {
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 a:visited {
