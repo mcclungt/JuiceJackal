@@ -133,6 +133,15 @@ li {
 	justify-content: center;
 }
 
+#recent-shows {
+	float: left;
+	max-width: 400px;
+	background-color: #42484f;
+	border-radius: 2px;
+	font-size: 12px;
+	line-height: 1em;
+}
+
 #bio-card {
 	float: right;
 	min-width: 742px;
