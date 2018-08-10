@@ -133,6 +133,10 @@ li {
 	justify-content: center;
 }
 
+.body-container {
+	width: 1300px;
+}
+
 #recent-shows {
 	float: left;
 	max-width: 400px;
